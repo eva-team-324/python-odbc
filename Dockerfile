@@ -1,11 +1,10 @@
-FROM docker.io/library/python:3.8.4
+ARG PYTHON_VERSION
+FROM docker.io/library/python:${PYTHON_VERSION}
 RUN true \
-    && echo "deb http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse" > /etc/apt/sources.list.d/official-package-repositories.list \
     && apt-get update \
     \
-    && apt-get install unixodbc=2.3.9-5 \
+    && apt-get install -y unixodbc=2.3.6-0.1 \
     \
     && apt-get clean autoclean \
-    && apt-get autoremove --yes \
-    && rm -f /etc/apt/sources.list.d/official-package-repositories.list \
+    # && apt-get autoremove --yes \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/
