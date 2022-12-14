@@ -12,7 +12,7 @@ Official python image + dependencies required to query remote MSSQL servers usin
 Build new image:
 
 ```sh
-export PYTHON_VERSION=<python-version> # e.g. 3.8.5
+PYTHON_VERSION=<python-version> # e.g. 3.8.5
 docker build --build-arg PYTHON_VERSION=${PYTHON_VERSION} -t docker.io/evateam324/python-odbc:${PYTHON_VERSION} .
 ```
 
