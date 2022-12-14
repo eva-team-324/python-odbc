@@ -1,7 +1,11 @@
 python-odbc
 ===========
 
-Official python image + pyodbc dependencies
+Official python image + dependencies required to query remote MSSQL servers using `pyodbc`:
+
+- `pyodbc` python package dependencies (`unixodbc-dev` which provides the appropriate C headers)
+- Microsoft SQL Server driver (required to perform queries)
+- MSSQL tools (such as `sqlcmd`)
 
 # Usage
 
